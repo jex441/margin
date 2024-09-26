@@ -6,7 +6,7 @@ import { Image } from 'astro:assets';
 
 <Layout title="Margin Research">
 	<main class="h-screen w-screen overflow-hidden">
-		<section class="w-full bg-black/70 text-white h-10 flex justify-center items-center">
+		<section class="w-full bg-black/70 text-white text-xs lg:text-md h-10 flex justify-center items-center">
 		<button type="button" class="text-xs uppercase bg-blue-500/80 rounded-md px-4 py-1 mx-4 text-white">
 		blog
 		</button>
@@ -14,13 +14,13 @@ import { Image } from 'astro:assets';
 			Part 3: You can't spell WebRTC without RCE
 		</span>
 		</section>
-	<section class="flex w-full items-center justify-center h-4/6">
-	<div class="flex flex-col w-[520px] text-center gap-8">
+	<section class="flex w-full mt-14 lg:mt-0 lg:items-center justify-center h-4/6">
+	<div class="flex flex-col w-full px-2 lg:px-0 lg:w-[520px] text-center gap-8">
 		<div class="flex flex-col gap-6">
 			<h3>
 				Moving research into products
 			</h3>
-			<h1 class="text-5xl">
+			<h1 class="text-3xl lg:text-5xl">
 				Margin Research is a boutique cyber security firm located in NYC.
 			</h1>
 			<p class="text-lg">
@@ -32,18 +32,18 @@ import { Image } from 'astro:assets';
 			Get in touch
 		</button>
 		<a href="/blog">
-		<div class="flex flex-row items-center text-lg gap-6">
+		<div class="flex flex-row items-center text-md lg:text-lg gap-3 lg:gap-6">
 			<span class="hover:underline">
 				Latest from the blog 
 			</span>
 			<span>
-			<img src="arrow.png" class="w-6" />
+			<img src="arrow.png" class="w-4 lg:w-6" />
 			</span>
 		</div>
 		</a>
 	</div>
 	</section>
-	<section class="headings absolute w-[3600px] text-6xl">
+	<section class="headings absolute w-[3600px] opacity-80 bottom-10 text-6xl">
 	<ul class="flex flex-row gap-20 w-">
 	<li>
 		Applied Research and Development
@@ -70,7 +70,7 @@ import { Image } from 'astro:assets';
 <style>
 main {
 background-image: url("/marginbg1.png");
-background-position: center -200px;
+background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
 }
