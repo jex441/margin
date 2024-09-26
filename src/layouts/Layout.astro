@@ -17,6 +17,23 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+	<nav class="w-full py-2 px-10 h-14 flex flex-row justify-between items-center">
+	<div class="flex flex-row items-center gap-4">
+	<img src="margincircle.png" class="w-10" /> Margin Research
+	</div>
+	<div>
+	<ul class="flex flex-row gap-6">
+		<li>About</li>
+		<li>Services</li>
+		<li>Resources</li>
+		<li>Blog</li>
+	</ul>
+	</div>
+	<div>
+	<button type="button" class="py-1 px-4 text-white bg-black/75 rounded-md">
+		Contact us
+	</button>
+	</nav>
 		<slot />
 	</body>
 </html>
@@ -34,7 +51,8 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #f9f9f9;
+		color: #232931
 	}
 	code {
 		font-family:
