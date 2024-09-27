@@ -7,7 +7,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Margin Research</title>
+
     <style>
+	  nav {
+		color: #FFF;
+		font-size: 14px;
+	  }
       .mobile-menu {
         display: none;
       }
@@ -37,10 +42,10 @@
     </style>
   </head>
   <body>
-    <nav class="w-full bg-['#f9f9f9']/70 py-2 px-4 lg:px-10 h-14 flex justify-between items-center">
+    <nav class="w-full bg-transparent fixed top-0 py-2 px-4 lg:px-10 h-16 flex justify-between items-center">
       <a href="#">
         <div class="flex items-center gap-4">
-          <img src="margincircle.png" class="w-10" alt="Logo" />
+          <img src="marginwhitecircle.png" class="w-10" alt="Logo" />
           Margin Research
         </div>
       </a>
@@ -50,7 +55,7 @@
         <li><a href="#" class="cursor-pointer hover:underline">Resources</a></li>
         <li><a href="#" class="cursor-pointer hover:underline">Blog</a></li>
       </ul>
-      <button type="button" class="hidden lg:block py-1 px-4 text-white bg-black/75 rounded-md">
+    <button class="w-[150px] bg-transparent text-white py-2 px-4 rounded-md border-white border-2 hover:bg-black/20 transition-all" type="button">
         Contact us
       </button>
       <div class="lg:hidden flex items-center">
@@ -93,10 +98,3 @@
     </script>
   </body>
 </html>
-
-<style>
-
-nav {
-	color: #686767;
-	font-size: 14px;
-}

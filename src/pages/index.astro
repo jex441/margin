@@ -5,45 +5,38 @@ import { Image } from 'astro:assets';
 ---
 
 <Layout title="Margin Research">
-	<main class="h-screen w-screen overflow-hidden">
-		<section class="w-full bg-black/70 text-white text-xs lg:text-md h-10 flex justify-center items-center">
-		<button type="button" class="text-xs uppercase bg-blue-500/80 rounded-md px-4 py-1 mx-4 text-white">
+	<main class="text-white h-screen w-screen overflow-hidden">
+		<section class="hidden w-full bg-black/70 text-white text-xs lg:text-md h-10 flex justify-center items-center">
+		<button type="button" class="text-xs uppercase bg-blue-500/70 rounded-full px-4 py-1 mx-4 text-white">
 		blog
 		</button>
 		<span class="font-light">
-			Part 3: You can't spell WebRTC without RCE
+			<a href="#" class="hover:underline">Part 3: You can't spell WebRTC without RCE</a>
 		</span>
 		</section>
-	<section class="flex w-full mt-14 lg:mt-0 lg:items-center justify-center lg:h-4/6">
-	<div class="flex flex-col w-full px-2 lg:px-0 lg:w-[520px] text-center gap-8">
+	<section class="flex w-full lg:items-center ml-24 h-full">
+	<div class="flex flex-col w-full px-2 lg:px-0 lg:w-[520px] gap-8">
 		<div class="flex flex-col gap-4 lg:gap-0">
 			<h3>
 				Moving research into products
 			</h3>
-			<p class="text-3xl lg:text-5xl lg:leading-snug">
+			<p class="text-3xl font-semibold lg:text-5xl lg:leading-tight">
 				Margin Research is a boutique cyber security firm located in NYC.
 			</p>
-			<p class="my-4 text-lg leading-loose">
+			<p class="my-4 tracking-wide text-lg leading-loose">
 				We specialize in software program analysis, reverse engineering, vulnerability research, and offensive threat intelligence.
 			</p>
 		</div>
-		<div class="w-full flex flex-row items-center justify-center gap-8">
-		<button class="bg-black/80 text-white py-2 px-6 rounded-md hover:bg-black/100 transition-color" type="button">
+		<div class="w-full font-medium flex flex-row items-center gap-8">
+		<button class="w-[150px] bg-transparent text-white py-2 px-6 rounded-md border-white border-2 hover:bg-black/20 transition-all" type="button">
 			Get in touch
 		</button>
-		<a href="/blog">
-		<div class="flex flex-row items-center text-md lg:text-lg gap-3 lg:gap-6">
-			<span class="hover:underline">
-				Latest from the blog 
-			</span>
-			<span>
-			<img src="arrow.png" class="w-4 lg:w-6" />
-			</span>
-		</div>
-		</a>
+			<button class="w-[150px] bg-transparent text-white py-2 px-6 rounded-md border-white border-2 hover:bg-black/20 transition-all" type="button">
+				Blog 
+			</blog>
 	</div>
 	</section>
-	<section class="headings mb-8 lg:mb-0 lg:absolute w-[3600px] opacity-80 bottom-10 text-6xl">
+	<section class="headings mb-8 lg:mb-0 lg:absolute w-[3600px] opacity-60 bottom-10 text-6xl">
 	<ul class="flex flex-row gap-20 w-">
 	<li>
 		Applied Research and Development
@@ -69,8 +62,8 @@ import { Image } from 'astro:assets';
 
 <style>
 main {
-background-image: url("/marginbg1.png");
-background-position: center;
+background-image: url("/marginbg3.png");
+background-position: center -120px;
 background-size: cover;
 background-repeat: no-repeat;
 }
