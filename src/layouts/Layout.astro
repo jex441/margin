@@ -1,3 +1,8 @@
+
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,54 +41,12 @@
       }
     </style>
   </head>
-  <body>
-    <nav class="w-full bg-['#f9f9f9']/70 py-2 px-4 lg:px-10 h-14 flex justify-between items-center">
-      <a href="#">
-        <div class="flex items-center gap-4">
-          <img src="margincircle.png" class="w-10" alt="Logo" />
-          Margin Research
-        </div>
-      </a>
-      <ul class="hidden lg:flex flex-row gap-6 desktop-menu">
-        <li><a href="#" class="cursor-pointer hover:underline">About</a></li>
-        <li><a href="#" class="cursor-pointer hover:underline">Services</a></li>
-        <li><a href="#" class="cursor-pointer hover:underline">Resources</a></li>
-        <li><a href="#" class="cursor-pointer hover:underline">Blog</a></li>
-      </ul>
-      <button type="button" class="hidden lg:block py-1 px-4 text-white bg-black/75 rounded-md">
-        Contact us
-      </button>
-      <div class="lg:hidden flex items-center">
-        <button class="hamburger" id="menu-btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-      </div>
-      <ul id="mobile-menu" class="mobile-menu lg:hidden flex flex-col gap-4">
-        <li><a href="#" class="cursor-pointer hover:underline">About</a></li>
-        <li><a href="#" class="cursor-pointer hover:underline">Services</a></li>
-        <li><a href="#" class="cursor-pointer hover:underline">Resources</a></li>
-        <li><a href="#" class="cursor-pointer hover:underline">Blog</a></li>
-        <li>
-          <button type="button" class="py-1 px-4 text-white bg-black/75 rounded-md">
-            Contact us
-          </button>
-        </li>
-      </ul>
-    </nav>
-    <slot />
+  <body class="bg-[#f9f9f9]">
+    <Header />
+    <div class="w-full">
+      <slot />
+    </div>
+    <Footer />
     <script>
       const menuBtn = document.getElementById('menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
@@ -97,6 +60,6 @@
 <style>
 
 nav {
-	color: #686767;
+	color: #393E46;
 	font-size: 14px;
 }

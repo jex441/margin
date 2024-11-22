@@ -5,71 +5,44 @@ import { Image } from 'astro:assets';
 ---
 
 <Layout title="Margin Research">
-	<main class="h-screen w-screen overflow-hidden">
-		<section class="w-full bg-black/70 text-white text-xs lg:text-md h-10 flex justify-center items-center">
-		<button type="button" class="text-xs uppercase font-semibold bg-blue-700/80 rounded-md px-4 py-1 mx-4 text-white">
-		blog
-		</button>
-		<span class="font-light">
-			Part 3: You can't spell WebRTC without RCE
-		</span>
+	<main class="min-h-screen text-[#222831] w-screen bg-[#f9f9f9] overflow-hidden">
+		
+		<section class="my-5 w-[400px] gap-3 py-6 justify-self-center bg-white text-xs lg:text-md h-14 rounded-3xl border-[1px] border-[#ccc]/50 shadow-sm flex justify-center items-center">
+			<span class="text-[#686767]">Blog:</span>
+				<span class="font-semibold text-[#222831]">
+					You can't spell WebRTC without RCE - Part 3
+				</span>
+			<span>
+				<img class="w-3" src="arrowupright.png" />
+			</span>
 		</section>
-	<section class="flex w-full mt-14 lg:mt-0 lg:items-center justify-center lg:h-4/6">
+
+	<section class="flex my-5 w-full mt-14 lg:mt-0 lg:items-center justify-center lg:h-1/2">
 	<div class="flex flex-col w-full px-2 lg:px-0 lg:w-[600px] text-center gap-8">
-		<div class="flex flex-col gap-4">
-			<p class="text-lg">
+		<div class="flex flex-col gap-3">
+			<p class="">
 				Moving research into products
 			</p>
-			<p class="text-3xl lg:text-6xl">
+			<p class="text-3xl lg:text-5xl lg:leading-tight">
 				Margin Research is a boutique cyber security firm located in NYC.
 			</p>
-			<p class="my-2 text-lg leading-loose">
+			<p class="my-2  text-[#222831] font-light leading-loose">
 				We specialize in software program analysis, reverse engineering, vulnerability research, and offensive threat intelligence.
 			</p>
 		</div>
-		<div class="w-full flex flex-row items-center justify-center gap-8">
-		<button class="bg-black/80 text-white py-2 px-6 rounded-md hover:bg-black/100 transition-color" type="button">
-			Get in touch
-		</button>
-		<a href="/blog">
-		<div class="flex flex-row items-center text-md lg:text-lg gap-3 lg:gap-6">
-			<span class="hover:underline underline-offset-4">
-				Latest from the blog 
-			</span>
-			<span>
-			<img src="arrow.png" class="w-4 lg:w-6" />
-			</span>
-		</div>
-		</a>
 	</div>
 	</section>
-	<section class="headings mb-8 lg:mb-0 lg:absolute w-[3600px] opacity-80 bottom-10 text-6xl">
-	<ul class="flex flex-row gap-20 w-">
-	<li>
-		Applied Research and Development
-	</li>
-	<li>
-		Program Analysis
-	</li>
-	<li>
-		Security Consulting
-	</li>
-	<li>
-		Reverse Engineering
-	</li>
-	<li>
-		Vulnerability Research
-	</li>
-	<li>
-		Trainings
-	</li>
+
+	<section class="w-[1500px] flex justify-center overflow-hidden mb-20 flex flex-row items-center overflow-hidden">
+	<img class="h-[450px] bg-gray-300 m-1 rounded-md block" src="landing3.jpg" />
+	<img class="h-[450px] bg-gray-300 m-1 rounded-md block" src="landing2.jpg" />
+	<img class="h-[450px] bg-gray-300 m-1 rounded-md block" src="landing4.jpg" />
 	</section>
 	</main>
 </Layout>
 
 <style>
 main {
-background-image: url("/marginbg1.png");
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;

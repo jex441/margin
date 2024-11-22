@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { Image } from 'astro:assets';
+---
+
+<Layout title="Margin Research">
+	<main class="w-full flex justify-center text-[#222831]">
+    <div class="flex w-1/2 flex-col">
+
+        <section class="my-5 py-4 flex border-b-[1px] border-[#222831] flex-col gap-4">
+            <heading class="text-3xl">
+            We know how to detect XZ
+            </heading>
+            <div class="flex flex-row justify-between">
+            <div class="text-sm text-[#394A51]">
+                <span>Ian Roos</span>
+                <span>Apr 4, 2024</span>
+            </div>
+            <div class="flex flex-row gap-2">
+                <img class="w-6 h-6" src="x.png" />
+                <img class="w-6 h-6" src="linkedin.png" />
+                <img class="w-6 h-6" src="ycombinator.png" />
+                <img class="w-6 h-6" src="reddit.png" />
+                <img class="w-6 h-6" src="email.png" />
+            </div>
+        </section>
+
+        <div class="w-full justify-center flex">
+            <img class="rounded-md m-5 w-[600px]" src="blogpostimg.png" />
+        </div>
+
+        <div class="text-[16px] gap-4">
+        <p class="mb-4">
+        Security posture is relative. It is improper to designate something as perfectly secure, and anyone who claims otherwise is selling you something. We achieve a degree of security that lets us sleep at night by creating the most challenging maze possible for any would-be attackers. This strategy, often referred to as ‘imposing cost ‘, involves making the task of disrupting open source software so difficult and time-consuming that potential attackers might seek other avenues to accomplish their goals. The future of open source security (OSS) should not be a maze of compliance designed by bureaucrats middling away their hours while they count CVEs, but rather the application of known stressors upon any disruptor to open source. 
+        </p>
+        <p class="mb-4">
+        We rely too much on the work of unpaid, unsupported, and under appreciated individuals to audit the roles and responsibilities of both each other and the software they write. However, we have the power of technology at our disposal. Technology exists to support and amplify jobs we deem necessary. Just as I wouldn’t walk across the continent or swim across the ocean, we shouldn’t expect open source contributors to do all the security auditing manually. We should leverage technology to determine when critical open source project maintainers behave in odd and potentially harmful ways.
+        </p>
+        <p class="mb-4">
+        We achieve this with what makes Open Source Software beautiful: observability. A famous quote from The Cathedral and the Bazaar by Eric Raymond states, “With Many Eyeballs, All Bugs Are Shallow.” Not to knock Mr. Raymond’s great work, but to put it bluntly, if it worked, it would be working. Thus, I propose a modification of this principle: not many eyes, but a Great Eye, lidless, and wreathed in flame. 
+        </p>
+        <p class="mb-4">
+        Several years ago, Sergey Bratus had a brilliant idea to explore the social dynamics of Open-Source Software. He believed that a comprehensive understanding of those dynamics would allow you to ask and answer questions about the security of that software. DARPA spawned the project Social Cyber, and from that, Margin Research invented a tool called Reagent. 
+        </p>
+        <p class="mb-4">
+        Reagent is effectively our eye of Sauron. We take all .GIT metadata and throw it into a graph database. We further analyze and characterize it to build detection rules that flag anomalies and insecure patterns. 
+        </p>
+        <p class="mb-4">
+        How do we catch Jia Tan in the future:
+        </p>
+        <p class="mb-4">
+       <h2>Purpose built emails</h2>
+        The threat actor used brand new Gmail accounts that don’t occur anywhere else on the internet. You can discover this by throwing each email they used into the Have I Been Pwned database and discovering zero hits. We log this data for any open source email. Did you know it is extremely difficult to place yourself in the LinkedIn breach from 2013 after it happened? 
+        </p>
+Temporal risk
+Rhea Karty and Simon Henniger have a spectacular write-up on tracking this sort of problem. We also analyze time zones and timestamps, and this article explains how that can manifest in anomalous ways. 
+Exposure to external projects is anomalous.
+If you have a complete understanding of the ways people contribute to files, you come to understand how those files relate to each other. When we see activity that doesn’t follow that pattern, it is cause for concern. Often, these are automated fuzzers looking for security vulnerabilities. Other times, it’s someone leveraging their status in one project to affect another. Sometimes, it might not make sense that they’re touching that file in that context. We flag this abnormality. 
+Effectively top maintainer of a critical tool
+I will probably need a separate post to get into the weeds of what exactly it means for someone to be “in charge” of a project. In this case, the most naive examination of the data is sufficient . Jia Tan became the primary contributor of XZ in January 2023. We base this assessment on commit/authorship frequency and volume relative to the rest of the project. 
+Lack of lateral support by authentic developers on the same project. 
+I’ll probably also need another blog post to explain what “healthy open source project” means. In this case, we can see that this project didn’t have much lateral support. There was one core maintainer who was not being supported and is probably being harassed by morons at this very moment. Similar harassment drove him to make Jia a maintainer in the first place. If he were being paid (if other people on the project would get paid), perhaps there would be more shared responsibility across the filesystem, preventing one person from running amok. I know that pointing at a problem (not paying OSS devs) and not providing a solution is effectively hot air. So I’ll point people towards companies like Tidelift which are making great strides in this area to support developers. 
+When you impose these techniques on attackers, they will modify their tradecraft accordingly. We are not only anticipating this but we are hoping for it. Each time we steer their ship, we can steer it in a direction that becomes increasingly painful for them to continue until they eventually sail in a different direction entirely. We then achieve a measure of security. 
+
+Internally, we are tracking and anticipating what adversaries will do to avoid these detection techniques in the future, and we are planning for this eventuality. That said, if anyone reading this has ideas on how to avoid these detection techniques, please don’t hesitate to reach out! The farther ahead we get of this attack pattern, the greater our ability to influence, disrupt, and stop attackers becomes. 
+
+Some terrible ideas as a parting thought:
+
+Require state ID to push code
+Go home Xi. Setting aside the obvious problems with this approach, open source is an international effort and needs to remain as such. 
+Require “Social Credit” to push code
+This also doesn’t work. Trust is not inherent, it is built over time. Contributors must be given to the room to do so. 
+“Critical software should only be worked on by people with a top secret clearance”
+I saw this on a Hacker News thread and if they were trolling - well done. If not, this betrays a lack of knowledge of what both those things mean. 
+Make everything closed source
+Ask the CSRB how that’s going for Microsoft.
+Stop unknown people from committing code
+No, just keep your eye(s) open. 
+        </p>
+        </div>
+	</main>
+</Layout>
+
